@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Maniya Real Estate Website</title>
+    <link rel="icon" href="manish.jpeg" type="image/png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylecalci.css">
+    <link rel="stylesheet" href="stylevis.css">
+    <link rel="stylesheet" href="hero.css"> <!-- Link to the new CSS file -->
+    
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-red">
+        <a class="navbar-brand" href="http://127.0.0.1:5500/index.html?#">Maniya RealEstate Pro</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#properties">Properties</a></li>
+                <li class="nav-item"><a class="nav-link" href="#emi-calculator">EMI Calculator</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero-section text-center position-relative">
+        <video autoplay muted loop class="video-background">
+            <source src="home.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div> <!-- Optional: to darken the video -->
+        <div class="container position-relative z-index-1">
+            <h1 class="text-white display-4">Find Your Dream Home</h1>
+            <p class="text-white lead">Your trusted partner in real estate</p>
+            <a href="#properties" class="btn btn-primary btn-lg mt-3">View Properties</a>
+        </div>
+    </header>
+
+    <!-- Properties Section -->
+    <section id="properties" class="properties-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Featured Rentals</h2>
+            <!-- Category Filter -->
+            <div class="form-group">
+                <select id="category-filter" class="form-control">
+                    <option value="">All Categories</option>
+                    <option value="property">Property Rent</option>
+                    <option value="room">Room Rent</option>
+                    <option value="hall">Hall Rent</option>
+                    <option value="shop">Shop Rent</option>
+                </select>
+            </div>
+
+            <div class="row" id="property-list">
+                <!-- Property Rent Card -->
+                <div class="col-lg-4 col-md-6 mb-4 property-item" data-category="property" data-location="Gorapadao">
+                    <div class="card">
+                        <img class="card-img-top" src="prop.jpeg" alt="Property Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Property Rent</h5>
+                            <p class="card-text"> Gorapadao |2000 Sq Ft| 1500 Sq Ft | </p>
+                            <button class="btn btn-primary view-details" data-toggle="modal" data-target="#propertyModal" data-title="Luxury Villa for Rent" data-description="A beautiful villa for rent located in Gorapadao.">More Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room Rent Card -->
+                <div class="col-lg-4 col-md-6 mb-4 property-item" data-category="room" data-location="Gorapadao">
+                    <div class="card">
+                        <img class="card-img-top" src="home.jpeg" alt="Room Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Room for Rent</h5>
+                            <p class="card-text"> Gorapadao | 1 Bed | Shared Bath</p>
+                            <button class="btn btn-primary view-details" data-toggle="modal" data-target="#propertyModal" data-title="Room for Rent" data-description="A cozy room available for rent in Gorapadao.">More Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hall Rent Card -->
+                <div class="col-lg-4 col-md-6 mb-4 property-item" data-category="hall" data-location="Chicago">
+                    <div class="card">
+                        <img class="card-img-top" src="hall.jpeg" alt="Hall Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Event Hall for Rent</h5>
+                            <p class="card-text">Gorapadao | Capacity: 200 people</p>
+                            <button class="btn btn-primary view-details" data-toggle="modal" data-target="#propertyModal" data-title="Event Hall for Rent" data-description="A spacious hall for events available in Gorapadao.">More Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shop Rent Card -->
+                <div class="col-lg-4 col-md-6 mb-4 property-item" data-category="shop" data-location="Miami">
+                    <div class="card">
+                        <img class="card-img-top" src="th.jpeg" alt="Shop Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Shop for Rent</h5>
+                            <p class="card-text">Gorapadao | 500 Sq Ft</p>
+                            <button class="btn btn-primary view-details" data-toggle="modal" data-target="#propertyModal" data-title="Shop for Rent" data-description="A well-located shop available for rent in Gorapadao.">More Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+   <!-- EMI Calculator Form with Sliders -->
+<section id="emi-calculator" class="py-5">
+    <div id="EMI Calculator">
+        <h2 class="text-center mb-4">EMI Calculator</h2>
+        <form id="emi-form">
+            <!-- Loan Amount Input with Range Slider -->
+            <div class="form-group">
+                <label for="loan-amount">Loan Amount (₹): <span id="loan-amount-value"></span></label>
+                <input type="range" id="loan-amount" class="form-control-range" min="100000" max="10000000" step="10000" value="500000">
+            </div>
+
+            <!-- Interest Rate Input with Range Slider -->
+            <div class="form-group">
+                <label for="interest-rate">Interest Rate (%): <span id="interest-rate-value"></span></label>
+                <input type="range" id="interest-rate" class="form-control-range" min="1" max="20" step="0.1" value="7.5">
+            </div>
+
+            <!-- Loan Tenure Input with Range Slider -->
+            <div class="form-group">
+                <label for="loan-tenure">Loan Tenure (years): <span id="loan-tenure-value"></span></label>
+                <input type="range" id="loan-tenure" class="form-control-range" min="1" max="30" step="1" value="15">
+            </div>
+
+            <!-- Real-time EMI Calculation -->
+            <div class="form-group">
+                <button type="button" class="btn btn-primary" id="calculate-emi">Calculate EMI</button>
+            </div>
+
+            <!-- Display Results -->
+            <div id="emi-result"></div>
+            <div id="total-payable"></div>
+            <div id="total-interest"></div>
+
+            <!-- Pie Chart for EMI Breakdown -->
+            <canvas id="emiChart" width="400" height="200"></canvas>
+        </form>
+    </div>
+</section>
+
+<!-- Load Chart.js for Pie Chart -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<section id="about" class="about-section py-5 bg-light">
+
+        <div class="container">
+            <h2 class="text-center mb-5">About Us</h2>
+            <p class="text-center">Maniya RealEstatePro is your trusted partner in the real estate world. With years of experience in matching clients with their perfect homes, rentals, and commercial spaces, we strive to offer the best properties at affordable prices. Our team is dedicated to providing an exceptional customer experience and ensuring you find the property that fits your needs.</p>
+        </div>
+    </section>
+
+     <!-- Contact Section -->
+     <section id="contact" class="contact-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Contact Us</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" id="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <h4>Our Location</h4>
+                    <p>Gorapadao, Haldwani, Arjunpur, Uttarakhand 263139</p>
+                    <p>Email: contact@maniyarealestatepro.com</p>
+                    <p>Phone: 7252992929</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+    <footer class="text-center py-4 bg-danger text-white">
+        <p>&copy; 2024 Maniya Real Estate Pro. All rights reserved.</p>
+        <section>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/manish-norki-727385133/?originalSubdomain=in" target="_blank" class="text-white mx-2" title="LinkedIn">
+                <i class="fab fa-linkedin fa-lg"></i> <!-- Updated to regular LinkedIn icon -->
+            </a>
+            
+            <a href="https://www.instagram.com/maniya_2929/" target="_blank" class="text-white mx-2" title="Instagram">
+                <i class="fab fa-instagram fa-lg"></i>
+            </a>
+            <a href="mailto:manishnorki2929@gmail.com" class="text-white mx-2" title="Email">
+                <i class="fas fa-envelope fa-lg"></i>
+            </a>
+            <!-- Add new social link -->
+            <a href="https://www.facebook.com/yourprofile" target="_blank" class="text-white mx-2" title="Facebook">
+                <i class="fab fa-facebook fa-lg"></i>
+            </a>
+            <a href="https://twitter.com/yourprofile" target="_blank" class="text-white mx-2" title="Twitter">
+                <i class="fab fa-twitter fa-lg"></i>
+            </a>
+            <a href="https://wa.me/7252992929" target="_blank" class="text-white mx-2" title="WhatsApp">
+                <i class="fab fa-whatsapp fa-lg"></i>
+            </a>
+        </div>
+    </section>
+    </footer>
+    
+  
+
+    <!-- Modal for Property Details -->
+    <div class="modal fade" id="propertyModal" tabindex="-1" aria-labelledby="propertyModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="propertyModalLabel"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="property-description"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <script src="save.js"></script>
+    <script src="calcscript.js"></script>
+</body>
+</html>

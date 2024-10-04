@@ -1,0 +1,96 @@
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* EMI Calculator Section */
+#emi-calculator {
+    padding: 2rem;
+    background-color: #f9f9f9; /* Light background for the section */
+}
+
+/* EMI Form Styling */
+#emi-form {
+    background-color: white; /* White background for the form */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    margin: 20px auto; /* Center the form */
+    max-width: 400px; /* Maximum width of the form */
+}
+
+/* Label Styling */
+label {
+    margin-bottom: 5px;
+    font-weight: bold; /* Make labels bold */
+}
+
+/* Input Styling */
+input[type="number"] {
+    padding: 10px; /* Padding inside inputs */
+    margin-bottom: 15px; /* Space between inputs */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+input[type="number"]:focus {
+    border-color: #007bff; /* Blue border on focus */
+    outline: none; /* Remove outline */
+}
+
+/* Button Styling */
+button {
+    padding: 10px;
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Transition effect for hover */
+    width: 100%; /* Full width button */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Result Section Styling */
+.result-section {
+    margin-top: 20px; /* Space above result sections */
+    padding: 10px; /* Padding inside result sections */
+    background-color: #e9ecef; /* Light gray background */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center; /* Center text */
+    font-size: 1.2rem; /* Increased font size */
+    font-weight: bold; /* Make results bold */
+    opacity: 0; /* Hidden by default for animation */
+    transition: opacity 0.5s ease-in-out; /* Fade-in effect */
+}
+
+/* Specific Result Styling */
+#emi-result {
+    color: #007bff; /* Blue text for EMI result */
+}
+
+#total-payable {
+    color: #28a745; /* Green text for total payable */
+}
+
+#total-interest {
+    color: #dc3545; /* Red text for total interest */
+}
+
+/* Result Container for Animation */
+.result-container {
+    display: none; /* Hide by default */
+}
+
+/* Responsive Styling */
+@media (max-width: 480px) {
+    #emi-form {
+        width: 90%; /* Full width on smaller screens */
+    }
+}

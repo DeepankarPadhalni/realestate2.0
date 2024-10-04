@@ -1,0 +1,38 @@
+/* General Styles */
+body {
+    font-family: monospace;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+h2 {
+    color: #007bff; /* Blue color for headings */
+}
+
+.navbar {
+    background-color: #343a40; /* Dark navbar */
+}
+
+.hero-section {
+    background: url('hero-bg.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 100px 0;
+}
+
+.property-item {
+    transition: transform 0.3s;
+}
+
+.property-item:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}

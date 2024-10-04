@@ -1,0 +1,231 @@
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #d9534f; /* Red bus color */
+}
+.navbar-brand, .navbar-nav .nav-link {
+    color: #fff;
+}
+.navbar-nav .nav-link:hover {
+    color: #ffd700; /* Gold color on hover */
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: #d9534f;
+    padding: 80px 0;
+}
+.hero-section h1 {
+    color: #c71919;
+    font-size: 3rem;
+}
+.hero-section p {
+    color: #c22336;
+    font-size: 1.25rem;
+}
+
+/* Properties Section */
+.properties-section h2 {
+    color: #d9534f;
+}
+.card {
+    border: 1px solid #d9534f; /* Red border */
+}
+.card-title {
+    color: #d9534f; /* Red title */
+}
+.btn-primary {
+    background-color: #d9534f;
+    border-color: #d9534f;
+}
+.btn-primary:hover {
+    background-color: #c9302c; /* Darker red on hover */
+    border-color: #c9302c;
+}
+
+/* EMI Calculator Section */
+.emi-calculator-section {
+    background-color: #f8f9fa;
+}
+
+/* About Section */
+.about-section p {
+    font-size: 1.1rem;
+}
+
+/* Contact Section */
+.contact-section h2 {
+    color: #d9534f;
+}
+
+
+/* Additional styles from style2.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f2f5;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.75rem;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.hero-section {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-section h1 {
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.properties-section {
+    padding: 5rem 0;
+    background-color: #fff;
+}
+
+.properties-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.property-item {
+    transition: transform 0.3s;
+}
+
+.property-item:hover {
+    transform: scale(1.05);
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.card-text {
+    color: #6c757d;
+}
+
+#emi-form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+#emi-result {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.about-section {
+    background-color: #fff;
+    padding: 5rem 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section {
+    padding: 5rem 0;
+}
+
+.contact-section h4 {
+    margin-bottom: 1rem;
+}
+
+.contact-section p {
+    font-size: 1rem;
+}
+
+.modal-header {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.modal-body {
+    font-size: 1.1rem;
+}
+
+.btn-primary {
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .properties-section h2 {
+        font-size: 2rem;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+    }
+
+    .card-img-top {
+        height: 200px;
+    }
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.property-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffcc00;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
